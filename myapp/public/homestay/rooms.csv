@@ -1,0 +1,11 @@
+ref,host_ref,capacity
+room#1,host#1,2
+room#2,host#1,2
+room#3,host#2,2
+room#4,host#2,2
+room#5,host#3,2
+room#6,host#3,2
+room#7,host#3,2
+room#8,host#2,2
+room#9,host#1,2
+room#10,host#2,2

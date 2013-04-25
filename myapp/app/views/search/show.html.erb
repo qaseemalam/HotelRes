@@ -1,0 +1,24 @@
+<h1>Reservation Results</h1>
+<p></p>
+<div id="Data"> 
+ 
+
+   Search results between <%= @date1 %> and <%= @date2 %> for <%= @cap %> guest </br></br></br>
+<% a = "" %>
+<% @books.each do|bk| %>
+  <% if a != bk.host_id %>
+  <%= bk.host_id %></br>
+  <%= bk.name %></br>
+  <%= bk.address %></br>
+  <%= bk.room_id %> is available (<%= bk.no_of_guest%> booked, <%= bk.available %> free out of <%= bk.capacity%> total)
+  <% a = bk.host_id%>
+  <% else %>
+  <%= bk.room_id %> is available (<%= bk.no_of_guest%> booked, <%= bk.available %> free out of <%= bk.capacity%> total)</br>
+  <% end %>
+  </br>
+  </br>
+  </div>
+  <% end %>
+  <%= will_paginate @books %>
+  <%= link_to "Back", :controller => :search, :action => :reservation %>
+  

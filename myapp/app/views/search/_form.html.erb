@@ -1,0 +1,8 @@
+
+<%= form_tag({:controller => 'search', :action => 'show'}, {:method => 'get'}) do %>
+Date From:<%= date_select(:s_date, "s_date", :order => [:day, :month, :year]) %><br /><br />
+Date To       :<%= date_select(:e_date, "e_date", :order => [:day, :month, :year]) %><br /><br />
+No. of Guest  :<%= text_field_tag :capacity, params[:capacity] %><br /><br /><br /><br /><br />
+<%= submit_tag("   Go   ", :style => "font-size: 20px;") %>
+<% end %>
+<br />
